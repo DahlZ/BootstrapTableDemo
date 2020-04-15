@@ -11,7 +11,8 @@
 </head>
 
 <body>
-    <button id="BtnDetail">详情</button>
+    <button id="BtnJump">Jump</button>
+    <button id="BtnGetSelections">get Selections</button>
     <table id="table"></table>
     <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
@@ -23,97 +24,97 @@
     <script>
         $(function () {
             var data = [{
-                    "EmployeeGenderDesc": "女",
-                    "EmployeeId": "1",
-                    "EmployeeName": "测试人员2号",
-                    "IdCardNumber": "110101********7539",
-                    "EmployeeGender": 2,
-                    "EmployeePhone": "132*****172",
-                    "OrganizationId": "8f116433-ea91-48bb-bf02-79536a9ada3b",
-                    "OrganizationName": "测试机构1号",
-                    "OperatorName": "【内置操作】无",
-                    "CreateTime": "2020-04-10T14:53:22.073"
-                }, {
-                    "EmployeeGenderDesc": "女",
-                    "EmployeeId": "1",
-                    "EmployeeName": "测试人员2号",
-                    "IdCardNumber": "110101********7539",
-                    "EmployeeGender": 2,
-                    "EmployeePhone": "132*****172",
-                    "OrganizationId": "8f116433-ea91-48bb-bf02-79536a9ada3b",
-                    "OrganizationName": "测试机构1号",
-                    "OperatorName": "【内置操作】无",
-                    "CreateTime": "2020-04-10T14:53:22.073"
-                }, {
-                    "EmployeeGenderDesc": "女",
-                    "EmployeeId": "1",
-                    "EmployeeName": "测试人员2号",
-                    "IdCardNumber": "110101********7539",
-                    "EmployeeGender": 2,
-                    "EmployeePhone": "132*****172",
-                    "OrganizationId": "8f116433-ea91-48bb-bf02-79536a9ada3b",
-                    "OrganizationName": "测试机构1号",
-                    "OperatorName": "【内置操作】无",
-                    "CreateTime": "2020-04-10T14:53:22.073"
-                }, {
-                    "EmployeeGenderDesc": "女",
-                    "EmployeeId": "1",
-                    "EmployeeName": "测试人员2号",
-                    "IdCardNumber": "110101********7539",
-                    "EmployeeGender": 2,
-                    "EmployeePhone": "132*****172",
-                    "OrganizationId": "8f116433-ea91-48bb-bf02-79536a9ada3b",
-                    "OrganizationName": "测试机构1号",
-                    "OperatorName": "【内置操作】无",
-                    "CreateTime": "2020-04-10T14:53:22.073"
-                }, {
-                    "EmployeeGenderDesc": "女",
-                    "EmployeeId": "1",
-                    "EmployeeName": "测试人员2号",
-                    "IdCardNumber": "110101********7539",
-                    "EmployeeGender": 2,
-                    "EmployeePhone": "132*****172",
-                    "OrganizationId": "8f116433-ea91-48bb-bf02-79536a9ada3b",
-                    "OrganizationName": "测试机构1号",
-                    "OperatorName": "【内置操作】无",
-                    "CreateTime": "2020-04-10T14:53:22.073"
-                }, {
-                    "EmployeeGenderDesc": "女",
-                    "EmployeeId": "1",
-                    "EmployeeName": "测试人员2号",
-                    "IdCardNumber": "110101********7539",
-                    "EmployeeGender": 2,
-                    "EmployeePhone": "132*****172",
-                    "OrganizationId": "8f116433-ea91-48bb-bf02-79536a9ada3b",
-                    "OrganizationName": "测试机构1号",
-                    "OperatorName": "【内置操作】无",
-                    "CreateTime": "2020-04-10T14:53:22.073"
-                }, {
-                    "EmployeeGenderDesc": "女",
-                    "EmployeeId": "1",
-                    "EmployeeName": "测试人员2号",
-                    "IdCardNumber": "110101********7539",
-                    "EmployeeGender": 2,
-                    "EmployeePhone": "132*****172",
-                    "OrganizationId": "8f116433-ea91-48bb-bf02-79536a9ada3b",
-                    "OrganizationName": "测试机构1号",
-                    "OperatorName": "【内置操作】无",
-                    "CreateTime": "2020-04-10T14:53:22.073"
-                }, {
-                    "EmployeeGenderDesc": "女",
-                    "EmployeeId": "1",
-                    "EmployeeName": "测试人员2号",
-                    "IdCardNumber": "110101********7539",
-                    "EmployeeGender": 2,
-                    "EmployeePhone": "132*****172",
-                    "OrganizationId": "8f116433-ea91-48bb-bf02-79536a9ada3b",
-                    "OrganizationName": "测试机构1号",
-                    "OperatorName": "【内置操作】无",
-                    "CreateTime": "2020-04-10T14:53:22.073"
-                }];
+                "EmployeeGenderDesc": "女",
+                "EmployeeId": "1",
+                "EmployeeName": "测试人员2号",
+                "IdCardNumber": "110101********7539",
+                "EmployeeGender": 2,
+                "EmployeePhone": "132*****172",
+                "OrganizationId": "8f116433-ea91-48bb-bf02-79536a9ada3b",
+                "OrganizationName": "测试机构1号",
+                "OperatorName": "【内置操作】无",
+                "CreateTime": "2020-04-10T14:53:22.073"
+            }, {
+                "EmployeeGenderDesc": "女",
+                "EmployeeId": "1",
+                "EmployeeName": "测试人员2号",
+                "IdCardNumber": "110101********7539",
+                "EmployeeGender": 2,
+                "EmployeePhone": "132*****172",
+                "OrganizationId": "8f116433-ea91-48bb-bf02-79536a9ada3b",
+                "OrganizationName": "测试机构1号",
+                "OperatorName": "【内置操作】无",
+                "CreateTime": "2020-04-10T14:53:22.073"
+            }, {
+                "EmployeeGenderDesc": "女",
+                "EmployeeId": "1",
+                "EmployeeName": "测试人员2号",
+                "IdCardNumber": "110101********7539",
+                "EmployeeGender": 2,
+                "EmployeePhone": "132*****172",
+                "OrganizationId": "8f116433-ea91-48bb-bf02-79536a9ada3b",
+                "OrganizationName": "测试机构1号",
+                "OperatorName": "【内置操作】无",
+                "CreateTime": "2020-04-10T14:53:22.073"
+            }, {
+                "EmployeeGenderDesc": "女",
+                "EmployeeId": "1",
+                "EmployeeName": "测试人员2号",
+                "IdCardNumber": "110101********7539",
+                "EmployeeGender": 2,
+                "EmployeePhone": "132*****172",
+                "OrganizationId": "8f116433-ea91-48bb-bf02-79536a9ada3b",
+                "OrganizationName": "测试机构1号",
+                "OperatorName": "【内置操作】无",
+                "CreateTime": "2020-04-10T14:53:22.073"
+            }, {
+                "EmployeeGenderDesc": "女",
+                "EmployeeId": "1",
+                "EmployeeName": "测试人员2号",
+                "IdCardNumber": "110101********7539",
+                "EmployeeGender": 2,
+                "EmployeePhone": "132*****172",
+                "OrganizationId": "8f116433-ea91-48bb-bf02-79536a9ada3b",
+                "OrganizationName": "测试机构1号",
+                "OperatorName": "【内置操作】无",
+                "CreateTime": "2020-04-10T14:53:22.073"
+            }, {
+                "EmployeeGenderDesc": "女",
+                "EmployeeId": "1",
+                "EmployeeName": "测试人员2号",
+                "IdCardNumber": "110101********7539",
+                "EmployeeGender": 2,
+                "EmployeePhone": "132*****172",
+                "OrganizationId": "8f116433-ea91-48bb-bf02-79536a9ada3b",
+                "OrganizationName": "测试机构1号",
+                "OperatorName": "【内置操作】无",
+                "CreateTime": "2020-04-10T14:53:22.073"
+            }, {
+                "EmployeeGenderDesc": "女",
+                "EmployeeId": "1",
+                "EmployeeName": "测试人员2号",
+                "IdCardNumber": "110101********7539",
+                "EmployeeGender": 2,
+                "EmployeePhone": "132*****172",
+                "OrganizationId": "8f116433-ea91-48bb-bf02-79536a9ada3b",
+                "OrganizationName": "测试机构1号",
+                "OperatorName": "【内置操作】无",
+                "CreateTime": "2020-04-10T14:53:22.073"
+            }, {
+                "EmployeeGenderDesc": "女",
+                "EmployeeId": "1",
+                "EmployeeName": "测试人员2号",
+                "IdCardNumber": "110101********7539",
+                "EmployeeGender": 2,
+                "EmployeePhone": "132*****172",
+                "OrganizationId": "8f116433-ea91-48bb-bf02-79536a9ada3b",
+                "OrganizationName": "测试机构1号",
+                "OperatorName": "【内置操作】无",
+                "CreateTime": "2020-04-10T14:53:22.073"
+            }];
 
             var dataTable = $("#table").bootstrapTable({
-                data:data,
+                data: data,
                 method: 'GET', //请求方式（*）
                 height: "400", // 固定高度
                 classes: "table table-hover table-striped",
@@ -173,10 +174,17 @@
                     }
                 }],
             })
-        
-            // 修改
-            $("#BtnDetail").click(function () {
+
+            // Jump
+            $("#BtnJump").click(function () {
                 location.href = "https://github.com/";
+            });
+
+            // Selections
+            $("#BtnGetSelections").click(function () {
+                var data = $('#table').bootstrapTable('getSelections')
+                alert("当前选中数据：" + JSON.stringify(data));
+
             });
         })
     </script>
